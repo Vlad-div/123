@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#909"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mainTextButton"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.51" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textMonay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textPlusMany"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textMonay" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageButton
+            android:id="@+id/open"
+            android:layout_width="60dp"
+            android:layout_height="100dp"
+            android:backgroundTint="@color/cardview_shadow_end_color"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+            android:text="@string/menu"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/open2"
+            android:layout_width="60dp"
+            android:layout_height="100dp"
+            android:backgroundTint="@color/cardview_shadow_end_color"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"
+            android:text="@string/menu"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/n"
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/m"
+            android:layout_width="250dp"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/L1"
+                style="@style/LinearLayoutStyle"
+                app:layout_constraintEnd_toEndOf="@+id/m"
+                app:layout_constraintStart_toStartOf="@+id/m"
+                app:layout_constraintTop_toTopOf="@+id/m">
+
+                <TextView
+                    android:id="@+id/click"
+                    style="@style/TextView2"
+                    android:text="@string/menuTextUpTechnology" />
+
+                <TextView
+                    android:id="@+id/nextLvlBur"
+                    style="@style/TextView2"
+                    android:text="  " />
+
+                <LinearLayout style="@style/LinearLayoutStyle2">
+
+                    <TextView
+                        android:id="@+id/textLvl"
+                        style="@style/TextView" />
+
+                    <TextView
+                        android:id="@+id/textPrice"
+                        style="@style/TextView" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/L2"
+                style="@style/LinearLayoutStyle"
+                app:layout_constraintEnd_toEndOf="@+id/L1"
+                app:layout_constraintStart_toStartOf="@+id/L1"
+                app:layout_constraintTop_toBottomOf="@+id/L1">
+
+                <TextView
+                    android:id="@+id/click2"
+                    style="@style/TextView2"
+                    android:text="@string/menuTextUpTechnology2" />
+
+                <LinearLayout
+                    style="@style/LinearLayoutStyle2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textLvl2"
+                        style="@style/TextView" />
+
+                    <TextView
+                        android:id="@+id/textPrice2"
+                        style="@style/TextView" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/L3"
+                style="@style/LinearLayoutStyle"
+                app:layout_constraintEnd_toEndOf="@+id/L2"
+                app:layout_constraintStart_toStartOf="@+id/L2"
+                app:layout_constraintTop_toBottomOf="@+id/L2">
+
+                <LinearLayout style="@style/LinearLayoutStyle2">
+
+                    <Button
+                        android:id="@+id/clickUp1"
+                        style="@style/ButtonStyle2"
+                        android:text="@string/menuTextUpTechnology3" />
+
+                    <Button
+                        android:id="@+id/clickUp2"
+                        style="@style/ButtonStyle2"
+                        android:text="@string/menuTextUpTechnology31" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/EditText"
+                    style="@style/Style"
+                    android:hint="@string/kvalTrue" />
+
+                <LinearLayout style="@style/LinearLayoutStyle2">
+
+                    <TextView
+                        android:id="@+id/textLvl3"
+                        style="@style/TextView" />
+
+                    <TextView
+                        android:id="@+id/textPrice3"
+                        style="@style/TextView" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/L4"
+                style="@style/LinearLayoutStyle"
+                app:layout_constraintEnd_toEndOf="@+id/L3"
+                app:layout_constraintStart_toStartOf="@+id/L3"
+                app:layout_constraintTop_toBottomOf="@+id/L3">
+
+                <LinearLayout style="@style/LinearLayoutStyle2">
+
+                    <Button
+                        android:id="@+id/clickUp3"
+                        style="@style/ButtonStyle2"
+                        android:text="@string/menuTextUpTechnology4" />
+
+                    <Button
+                        android:id="@+id/clickUp4"
+                        style="@style/ButtonStyle2"
+                        android:text="@string/menuTextUpTechnology31" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/EditText2"
+                    style="@style/Style"
+                    android:enabled="false"
+                    android:hint="@string/kvalTrue"/>
+
+                <LinearLayout style="@style/LinearLayoutStyle2">
+
+                    <TextView
+                        android:id="@+id/textLvl4"
+                        style="@style/TextView" />
+
+                    <TextView
+                        android:id="@+id/textPrice4"
+                        style="@style/TextView" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/L5"
+                style="@style/LinearLayoutStyle"
+                app:layout_constraintEnd_toEndOf="@+id/L4"
+                app:layout_constraintStart_toStartOf="@+id/L4"
+                app:layout_constraintTop_toBottomOf="@+id/L4">
+
+                <LinearLayout style="@style/LinearLayoutStyle2">
+
+                    <Button
+                        android:id="@+id/clickUp5"
+                        style="@style/ButtonStyle2"
+                        android:text="@string/menuTextUpTechnology5" />
+
+                    <Button
+                        android:id="@+id/clickUp6"
+                        style="@style/ButtonStyle2"
+                        android:text="@string/menuTextUpTechnology31" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/EditText3"
+                    style="@style/Style"
+                    android:enabled="false"
+                    android:hint="@string/kvalTrue"/>
+
+                <LinearLayout style="@style/LinearLayoutStyle2">
+
+                    <TextView
+                        android:id="@+id/textLvl5"
+                        style="@style/TextView" />
+
+                    <TextView
+                        android:id="@+id/textPrice5"
+                        style="@style/TextView" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/L6"
+                style="@style/LinearLayoutStyle"
+                app:layout_constraintEnd_toEndOf="@+id/L5"
+                app:layout_constraintStart_toStartOf="@+id/L5"
+                app:layout_constraintTop_toBottomOf="@+id/L5">
+
+                <LinearLayout style="@style/LinearLayoutStyle2">
+
+                    <Button
+                        android:id="@+id/clickUp7"
+                        style="@style/ButtonStyle2"
+                        android:text="@string/menuTextUpTechnology3" />
+
+                    <Button
+                        android:id="@+id/clickUp8"
+                        style="@style/ButtonStyle2"
+                        android:text="@string/menuTextUpTechnology31" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/EditText4"
+                    style="@style/Style"
+                    android:enabled="false"
+                    android:hint="@string/kvalTrue"/>
+
+                <LinearLayout style="@style/LinearLayoutStyle2">
+
+                    <TextView
+                        android:id="@+id/textLvl6"
+                        style="@style/TextView" />
+
+                    <TextView
+                        android:id="@+id/textPrice6"
+                        style="@style/TextView" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/L7"
+                style="@style/LinearLayoutStyle"
+                app:layout_constraintEnd_toEndOf="@+id/L6"
+                app:layout_constraintStart_toStartOf="@+id/L6"
+                app:layout_constraintTop_toBottomOf="@+id/L6">
+
+                <LinearLayout style="@style/LinearLayoutStyle2">
+
+                    <Button
+                        android:id="@+id/clickUp9"
+                        style="@style/ButtonStyle2"
+                        android:text="@string/menuTextUpTechnology3" />
+
+                    <Button
+                        android:id="@+id/clickUp10"
+                        style="@style/ButtonStyle2"
+                        android:text="@string/menuTextUpTechnology31" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/EditText5"
+                    style="@style/Style"
+                    android:enabled="false"
+                    android:hint="@string/kvalTrue"/>
+
+                <LinearLayout style="@style/LinearLayoutStyle2">
+
+                    <TextView
+                        android:id="@+id/textLvl7"
+                        style="@style/TextView" />
+
+                    <TextView
+                        android:id="@+id/textPrice7"
+                        style="@style/TextView" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/L8"
+                style="@style/LinearLayoutStyle"
+                app:layout_constraintEnd_toEndOf="@+id/L7"
+                app:layout_constraintStart_toStartOf="@+id/L7"
+                app:layout_constraintTop_toBottomOf="@+id/L7">
+
+                <LinearLayout style="@style/LinearLayoutStyle2">
+
+                    <Button
+                        android:id="@+id/clickUp11"
+                        style="@style/ButtonStyle2"
+                        android:text="@string/menuTextUpTechnology3" />
+
+                    <Button
+                        android:id="@+id/clickUp12"
+                        style="@style/ButtonStyle2"
+                        android:text="@string/menuTextUpTechnology31" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/EditText6"
+                    style="@style/Style"
+                    android:enabled="false"
+                    android:hint="@string/kvalTrue"/>
+
+                <LinearLayout style="@style/LinearLayoutStyle2">
+
+                    <TextView
+                        android:id="@+id/textLvl8"
+                        style="@style/TextView" />
+
+                    <TextView
+                        android:id="@+id/textPrice8"
+                        style="@style/TextView" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/n2"
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/m2"
+            android:layout_width="250dp"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/L9"
+                style="@style/LinearLayoutStyle"
+                app:layout_constraintEnd_toEndOf="@+id/m2"
+                app:layout_constraintStart_toStartOf="@+id/m2"
+                app:layout_constraintTop_toTopOf="@+id/m2">
+
+                <Button
+                    android:id="@+id/techno"
+                    style="@style/ButtonStyle2"
+                    android:text="@string/techno" />
+
+                <LinearLayout style="@style/LinearLayoutStyle2">
+
+                    <TextView
+                        android:id="@+id/technoLvl"
+                        style="@style/TextView"
+                        android:text=""/>
+
+                    <TextView
+                        android:id="@+id/technoPrice"
+                        style="@style/TextView"
+                        android:text=""/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

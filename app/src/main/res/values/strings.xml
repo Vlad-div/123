@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">ClickProject</string>
+    <string name="mainTextButton">Просить деньги у прохожих</string>
+    <string name="menu">Меню</string>
+
+    <string name="menuTextUpTechnology">Уровень общения</string>
+    <string name="menuTextUpTechnology2">Помошники</string>
+    <string name="menuTextUpTechnology3">Добавить людей в группу по сбору бумаги</string>
+    <string name="menuTextUpTechnology31">Убрать людей из группы</string>
+    <string name="menuTextUpTechnology4">Добавить людей в группу по сбору пластика</string>
+    <string name="menuTextUpTechnology5">Добавить людей в группу по сбору железяк</string>
+
+    <string name="techno">Улучшить квалификацию людей</string>
+
+    <string name="kvalTrue">Введите кол-во помошников</string>
+</resources>
